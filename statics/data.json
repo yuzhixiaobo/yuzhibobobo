@@ -4,7 +4,7 @@
     {
       "id": 45787,
       "XTBHtext": "qa9o4sf77qb9",
-      "nametext": "刘仁华",
+      "nametext": "刘泽宇",
       "sextext": "gender",
       "studentnotext": "id",
       "phonetext": "phone",
@@ -27,7 +27,7 @@
     {
       "id": 45787,
       "XTBHtext": "qa9o4sf77qb9",
-      "nametext": "刘仁华",
+      "nametext": "刘泽宇",
       "sextext": "gender",
       "studentnotext": "id",
       "phonetext": "phone",
@@ -50,7 +50,7 @@
     {
       "id": 45787,
       "XTBHtext": "qa9o4sf77qb9",
-      "nametext": "刘仁华",
+      "nametext": "刘泽宇",
       "sextext": "gender",
       "studentnotext": "id",
       "phonetext": "phone",
@@ -70,28 +70,6 @@
       "ctime": "new Date()",
       "xiaoqu": "未来城校区"
     },
-    {
-      "id": 45787,
-      "XTBHtext": "qa9o4sf77qb9",
-      "nametext": "刘仁华",
-      "sextext": "gender",
-      "studentnotext": "id",
-      "phonetext": "12354548787",
-      "reasontext": "外出面试",
-      "destinationtext": "武汉金融港",
-      "academytext": "academy",
-      "outtimetext": "2022-04-08 11:35:59",
-      "backtimetext": "2022-04-08 23:35:59",
-      "picturetext": "",
-      "supporttext": "",
-      "verifier1text": "审批通过",
-      "verifier2text": "",
-      "verifier3text": "",
-      "verifier1suggestiontext": "",
-      "verifier2suggestiontext": "",
-      "verifier3suggestiontext": "",
-      "ctime": "new Date()",
-      "xiaoqu": "未来城小区"
-    }
+
   ]
 }
