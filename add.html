@@ -1,0 +1,291 @@
+<html lang="zh" class="ios-fix">
+<head>
+    <meta charset="utf-8">
+    <title>预约申请</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="never">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Loading Bootstrap -->
+    <link href="statics/css/backend.min.css" rel="stylesheet">
+    <link href="statics/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="statics/js/html5shiv.js"></script>
+    <script src="statics/js/respond.min.js"></script>
+    <script src="statics/js/jquery-1.js"></script>
+    <script src="statics/js/bootstrap-datetimepicker.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var require = {
+            config: {
+                "site": {
+                    "name": "\u5b66\u751f\u9884\u7ea6\u7ba1\u7406\u7cfb\u7edf",
+                    "cdnurl": "",
+                    "version": "1.0.8",
+                    "timezone": "Asia\/Shanghai",
+                    "languages": {"backend": "zh-cn", "frontend": "zh-cn"}
+                },
+                "upload": {
+                    "cdnurl": "",
+                    "uploadurl": "\/reserve.php\/ajax\/upload",
+                    "bucket": "local",
+                    "maxsize": "10mb",
+                    "mimetype": "jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx,wav,mp4,mp3,pdf",
+                    "chunking": false,
+                    "chunksize": 2097152,
+                    "savekey": "\/uploads\/{year}{mon}{day}\/{filemd5}{.suffix}",
+                    "multipart": [],
+                    "multiple": false,
+                    "storage": "local"
+                },
+                "modulename": "admin",
+                "controllername": "reserve",
+                "actionname": "myadd",
+                "jsname": "backend\/reserve",
+                "moduleurl": "\/reserve.php",
+                "language": "zh",
+                "referer": null,
+                "__PUBLIC__": "\/",
+                "__ROOT__": "\/",
+                "__CDN__": ""
+            }
+        };
+    </script>
+
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
+            data-requiremodule="statics/js/require-backend.min.js?v=1.0.8"
+            src="statics/js/require-backend.min.js?v=1.0.8"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lang"
+            src=""></script>
+
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="addons"
+            src="statics/js/ddons.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="backend/reserve"
+            src="statics/js/reserve.js?v=1.0.8"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
+            data-requiremodule="bootstrap-datetimepicker" src="statics/js/bootstrap-datetimepicker.min.js"></script>
+</head>
+
+<body class="inside-header inside-aside ">
+<div id="main" role="main">
+    <div class="tab-content tab-addtabs">
+        <div id="content">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <section class="content-header hide">
+                        <h1>
+                            Dashboard <small>Control panel</small>
+                        </h1>
+                    </section>
+                    <div class="content">
+
+                        <style>
+                            body {
+                                background-color: #fff;
+                            }
+                        </style>
+
+                        <div style="position: relative;
+height: 20px;
+line-height: 20px;
+width: 100%;
+text-align: center;
+font-size: 16px;
+color: #222222;
+border-bottom: 1px solid #eeeeee;margin-bottom: 16px;padding-bottom: 27px;">
+                            <span class="back"></span>
+                            <span style="margin-bottom:7px;">通行预约</span>
+                        </div>
+
+                        <div id="add-form" class="form-horizontal nice-validator n-default n-bootstrap" role="form"
+                             data-toggle="validator" novalidate="novalidate">
+
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">姓名:</label>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input id="c-nametext" class="form-control" name="row[nametext]" type="text"
+                                           value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">学号:</label>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input id="c-studentnotext" class="form-control" name="row[studentnotext]"
+                                           type="text" value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">性别:</label>
+                                <div class="col-xs-12 col-sm-8">
+                                    <select id="c-sextext" class="form-control" name="row[sextext]" type="text"
+                                            value="未知">
+                                        <option value="">请选择</option>
+                                        <option>男</option>
+                                        <option>女</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">联系电话:</label>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input id="c-phonetext" class="form-control" name="row[phonetext]" type="text"
+                                           value="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">外出原因:</label>
+                                <div class="col-xs-12 col-sm-8">
+                                    <textarea id="c-reasontext" style="height:120px;" class="form-control"
+                                              name="row[reasontext]" type="text" value=""></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">目的地:</label>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input id="c-destinationtext" class="form-control" name="row[destinationtext]"
+                                           type="text" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">外出时间:</label>
+                                <div class="col-xs-12 col-sm-8" style="position: relative;">
+                                    <input id="c-outtimetext" data-date-format="YYYY-MM-DD HH:mm:ss"
+                                           data-use-current="true" class="form-control datetimepicker"
+                                           name="row[outtimetext]" type="text"  value="2022-04-07 15:49:02">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">返校时间:</label>
+                                <div class="col-xs-12 col-sm-8" style="position: relative;">
+                                    <input id="c-backtimetext" data-date-format="YYYY-MM-DD HH:mm:ss"
+                                           data-use-current="true" class="form-control datetimepicker"
+                                           name="row[backtimetext]" type="text" value="2022-04-07 15:49:02">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">学院:</label>
+                                <div class="col-xs-12 col-sm-8">
+                                    <input id="c-academytext" class="form-control" name="row[academytext]" type="text"
+                                           value="计算机学院">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-12 col-sm-2">预计通行校区:</label>
+                                <div class="col-xs-12 col-sm-8" style="position: relative;">
+                                    <select id="c-xiaoqu" class="form-control datetimepicker" name="row[xiaoqu]"
+                                            type="text" value="">
+                                        <option>未来城校区</option>
+                                        <option>南望山校区</option>
+                                        <option>全部校区</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group layer-footer">
+                                <label class="control-label col-xs-12 col-sm-2"></label>
+                                <div class="col-xs-12 col-sm-8">
+                                    <button class="btn btn-success" style="width:90vw;"
+                                            onclick="submit()">确定
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+    <div class="xl-chrome-ext-bar__logo"></div>
+
+    <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+    <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    window.onload = function () {
+        data = localStorage.getItem('data')
+        if (!data) {
+            return
+        }
+        data = JSON.parse(data)
+        $("#c-nametext").val(data.nametext)
+        $("#c-studentnotext").val(data.studentnotext)
+        $("#c-sextext").val(data.sextext)
+        $("#c-phonetext").val(data.phonetext)
+        $("#c-reasontext").val(data.reasontext)
+        $("#c-destinationtext").val(data.destinationtext)
+        $("#c-outtimetext").val(data.outtimetext)
+        $("#c-backtimetext").val(data.backtimetext)
+        $("#c-academytext").val(data.academytext)
+        $("#c-xiaoqu").val(data.xiaoqu)
+
+        // $("#c-outtimetext").datetimepicker({
+        //     minView: "day", //  选择时间时，最小可以选择到那层；默认是‘hour’也可用0表示
+        //     language: 'zh-CN', // 语言
+        //     autoclose: true, //  true:选择时间后窗口自动关闭
+        //     format: 'yyyy-mm-dd hh:00:00', // 文本框时间格式，设置为0,最后时间格式为2017-03-23 17:00:00
+        //     todayBtn: true, // 如果此值为true 或 "linked"，则在日期时间选择器组件的底部显示一个 "Today" 按钮用以选择当前日期。
+        //     startDate: new Date(),  // 窗口可选时间从今天开始
+        //     endDate: new Date()   // 窗口最大时间直至今天
+        // })
+
+    }
+
+
+    function submit() {
+        let name = $("#c-nametext").val()
+        let id = $("#c-studentnotext").val()
+        let gender = $("#c-sextext").val()
+        let phone = $("#c-phonetext").val()
+        let reason = $("#c-reasontext").val()
+        let destination = $("#c-destinationtext").val()
+        let outtime = $("#c-outtimetext").val()
+        let backtime = $("#c-backtimetext").val()
+        let academy = $("#c-academytext").val()
+        let area = $("#c-xiaoqu").val()
+        let data = {
+            "id": id,
+            "XTBHtext": "qa9o4sf77qb9",
+            "nametext": name,
+            "sextext": gender,
+            "studentnotext": id,
+            "phonetext": phone,
+            "reasontext": reason,
+            "destinationtext": destination,
+            "academytext": academy,
+            "outtimetext": outtime,
+            "backtimetext": backtime,
+            "picturetext": "",
+            "supporttext": "",
+            "verifier1text": "审批通过",
+            "verifier2text": "",
+            "verifier3text": "",
+            "verifier1suggestiontext": "",
+            "verifier2suggestiontext": "",
+            "verifier3suggestiontext": "",
+            "ctime": new Date(),
+            "xiaoqu": area
+        }
+        localStorage.setItem('data', JSON.stringify(data))
+        alert('ok')
+        location.href = 'index.html'
+    }
+</script>

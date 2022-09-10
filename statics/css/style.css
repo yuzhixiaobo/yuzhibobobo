@@ -1,0 +1,47 @@
+*{margin: 0;padding: 0;border: 0;list-style: none;text-decoration: none;color: inherit;font-weight: normal;font-family: "微软雅黑";box-sizing: border-box;font-style: normal;outline: none;-webkit-tap-highlight-color: transparent;}
+body{width: 100%;overflow-x: hidden;background: #ffffff}
+img{vertical-align: middle;max-width: 100%;}
+.top-bar{width: 100%;height: .88rem;display: flex;align-items: center;justify-content: center;font-size: .34rem;}
+/* 轮播图 */
+.slider{width: 100%;padding: 0 .3rem;}
+.swiper-container{width: 100%;height: auto;overflow: hidden;}
+.swiper-slide{width: 100%;height: auto;}
+.swiper-slide img{width: 100%;}
+.swiper-pagination{text-align: right;padding-right: .3rem;}
+.swiper-pagination-bullet{width: .08rem;height: .08rem;border-radius: 100%;}
+.swiper-pagination-bullet-active{width: .4rem;background: #ffffff;border-radius: .06rem;transition: all .3s linear;}
+/* 快捷导航 */
+.quick-nav{width: 100%;height: auto;overflow: hidden;padding: .65rem 0 .25rem 0;}
+.quick-nav ul{padding: 0 .05rem;display: flex;justify-content: center;flex-wrap: wrap;}
+.quick-nav ul li{width: 25%;display: flex;flex-direction: column;align-items: center;justify-content: center;margin-bottom: .5rem;}
+.quick-nav ul li img{width: 1.16rem;}
+.quick-nav ul li span{font-size: .28rem;padding-top: .1rem;color: #666666;}
+/* 热门服务 */
+.services{width: 100%;height: auto;overflow: hidden;padding: 0 .4rem;margin-bottom: .55rem;}
+.services .title{width: 100%;display: flex;justify-content: space-between;align-items: center;padding-bottom: .3rem;}
+.services .title span{font-size: .34rem;color: #333333;font-weight: bold;}
+.services .title a{font-size: .25rem;color: #999;}
+.services .list ul{display: flex;width: 100%;justify-content: space-between;}
+.services .list ul li{width: 3.2rem;padding: .28rem .2rem;background: #f7f8ff;border-radius: .1rem;display: flex;flex-direction: column;justify-content: center;}
+.services .list ul li p{font-size: .3rem;color: #333333;}
+.services .list ul li span{font-size: .24rem;color: #999999;padding-top: .15rem;}
+/* 热门机构 */
+.institutions{width: 100%;height: auto;overflow: hidden;padding: 0 .4rem;}
+.institutions .title{width: 100%;display: flex;justify-content: space-between;align-items: center;padding-bottom: .35rem;}
+.institutions .title span{font-size: .34rem;color: #333333;font-weight: bold;}
+.institutions .title a{font-size: .25rem;color: #999;}
+.institutions .list{width: 100%;height: auto;overflow: hidden;padding-top: .2rem;padding-left: .1rem;padding-right: .1rem;}
+.institutions .list ul li{display: flex;align-items: center;justify-content: space-between;margin-bottom: .5rem;}
+.institutions .list ul li img{width: .78rem;height: .78rem;flex-shrink: 0;margin-right: .1rem;}
+.institutions .list ul li .desc {display: flex;flex-direction: column;justify-content: center;align-items: flex-start;}
+.institutions .list ul li .desc p{font-size: .28rem;color: #333333;margin-bottom: .14rem;font-weight: bold;}
+.institutions .list ul li .desc span{font-size: .22rem;color: #808080;}
+.institutions .list ul li button{width: 1.15rem;height: .5rem;font-size: .24rem;color: #ffffff;border-radius: .5rem;flex-shrink: 0;background: #24d4b0;margin-left: .1rem;}
+/* tap-bar */
+.tap-bar-holder{width: 100%;height: 1.15rem;}
+.tap-bar{width: 100%;height: auto;overflow: hidden;position: fixed;bottom: 0;left: 0;z-index: 999;background: #ffffff;box-shadow: 0 -.05rem .1rem rgba(100,100,100,.1);}
+.tap-bar ul{width: 100%;display: flex;justify-content: space-between;}
+.tap-bar ul li{width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;height: 1.15rem;color: #a0a0a0;}
+.tap-bar ul li.on{color: #30e0ad;}
+.tap-bar ul li i{font-size: .44rem;}
+.tap-bar ul li span{font-size: .18rem;margin-top: .05rem;}

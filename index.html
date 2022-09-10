@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>通行预约系统</title>
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="statics/css/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="statics/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="statics/css/style.css" />
+    <script src="statics/js/flexible.js" type="text/javascript" charset="utf-8"></script>
+    <script src="statics/js/swiper-bundle.min.js"></script>
+    <script src="statics/js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="top-bar">
+            <span>通行预约系统</span>
+        </div>
+        <!-- 轮播图 -->
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img style="border-radius: 18px;;" src="statics/images/banner1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img style="border-radius: 18px;;" src="statics/images/banner1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img style="border-radius: 18px;;" src="statics/images/banner1.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- 快捷导航 -->
+        <div class="quick-nav">
+            <ul>
+                <li id="biaodan">
+                    <img src="statics/images/icon-yy.png" alt="">
+                    <span>预约申请</span>
+                </li>
+                <li id="zhuangtai">
+                    <img src="statics/images/icon-bg.png" alt="">
+                    <span>预约状态</span>
+                </li>
+                <li id="oa">
+                    <img src="statics/images/icon-tjk.png" alt="">
+                    <span>外出须知</span>
+                </li>
+                <li id="shenpi">
+                    <img src="statics/images/icon-wdtj.png" alt="">
+                    <span>预约审批</span>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- 热门服务 -->
+        <div class="services">
+            <div class="title"><span>更多服务</span><!--a href="#">查看更多</a--></div>
+            <div class="list">
+                <ul>
+                    <li id="fanxiao">
+                        <p>退出登录</p>
+                        <span>重新进行统一身份认证</span>
+                    </li>
+                    <li id="daka">
+                        <p>信息上报</p>
+                        <span>健康打卡，每日报平安</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 机构样式 -->
+        <!--div class="institutions">
+            <div class="title"><span>热门机构</span><a href="#">查看更多</a></div>
+            <div class="list">
+                <ul>
+                    <li>
+                        <img src="statics/images/logo.png" alt="">
+                        <div class="desc">
+                            <p>健康管理体检中心</p>
+                            <span>周一至周六 7:15-11:00(抽血截止9:00)</span>
+                        </div>
+                        <button @click="yuyue">预约</button>
+                    </li>
+                    <li>
+                        <img src="statics/images/logo.png" alt="">
+                        <div class="desc">
+                            <p>第一人民医院体检中心</p>
+                            <span>周一至周六 7:15-11:00(抽血截止9:00)</span>
+                        </div>
+                        <button @click="yuyue">预约</button>
+                    </li>
+                </ul>
+            </div>
+        </div-->
+        <!-- tap-bar -->
+        <!--div class="tap-bar-holder"></div-->
+        <!--div class="tap-bar">
+            <ul>
+                <li :class="activeTab==1?'on':''" @click="changeTab(1)">
+                    <i class="iconfont icon-home1"></i>
+                    <span>首页</span>
+                </li>
+                <li :class="activeTab==2?'on':''" @click="changeTab(2)">
+                    <i class="iconfont icon-baike1"></i>
+                    <span>资讯</span>
+                </li>
+                <li :class="activeTab==3?'on':''" @click="changeTab(3)">
+                    <i class="iconfont icon-gengduo1"></i>
+                    <span>应用</span>
+                </li>
+                <li :class="activeTab==4?'on':''" @click="changeTab(4)">
+                    <i class="iconfont icon-yuyue"></i>
+                    <span>预约</span>
+                </li>
+                <li :class="activeTab==5?'on':''" @click="changeTab(5)">
+                    <i class="iconfont icon-wode2"></i>
+                    <span>我的</span>
+                </li>
+            </ul>
+        </div-->
+    </div>
+</body>
+
+</html>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            activeTab: 1,
+            swiper: null
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+                this.swiper = new Swiper('.swiper-container', {
+                    autoplay: true,
+                    loop: true,
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                })
+            })
+        },
+        methods: {
+            // 切换tap-bar
+            changeTab: function (item) {
+                this.activeTab = item
+            },
+            // 预约
+            yuyue(){
+                alert("预约成功")
+            }
+        }
+    })
+
+    var zhuangtai = document.getElementById("zhuangtai");
+    zhuangtai.addEventListener("click", gotoshenpi);
+
+    var shenpi = document.getElementById("shenpi");
+    shenpi.addEventListener("click", gotoshenpi);
+
+    function gotoshenpi(){
+        
+        console.log("进入审批");
+        self.location='myindex.html';
+
+    
+    }
+
+    var fanxiao = document.getElementById("fanxiao");
+    fanxiao.addEventListener("click", gotofanxiao);
+
+    var daka = document.getElementById("daka");
+    daka.addEventListener("click", gotodaka);
+
+    function gotofanxiao(){
+        console.log("进入返校");
+        self.location='yqapp.cug.edu.cn/xsfw/sys/swmfxyqglapp/*default/index.do'; 
+    }
+
+    function gotodaka(){
+        console.log("进入打卡");
+        self.location='yqapp.cug.edu.cn/xsfw/sys/swmxsyqxxsjapp/*default/index.do'; 
+    }
+
+    var biaodan = document.getElementById("biaodan");
+    biaodan.addEventListener("click", gotobiaodan);
+
+    function gotobiaodan(){
+        console.log("进入表单");
+        self.location='add.html';
+
+    }
+	
+	var oa = document.getElementById("oa");
+    oa.addEventListener("click", gotooa);
+
+    function gotooa(){
+        
+        console.log("进入表单");
+        self.location='notice.html';
+    
+    }
+
+</script>

@@ -1,0 +1,506 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>预约审批</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link href="myindex/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="statics/js/jquery-1.js"></script>
+    <script type="text/javascript" src="myindex/js/tab.js"></script>
+</head>
+<body>
+
+<section class="aui-flexView">
+    <header class="aui-navBar aui-navBar-fixed">
+        <a href="javascript:window.history.back();" class="aui-navBar-item">
+            <i class="icon icon-return"></i> 预约审批
+        </a>
+        <div class="aui-center">
+            <span class="aui-center-title"></span>
+        </div>
+        <a href="javascript:;" class="aui-navBar-item">
+            <i class="icon icon-sx"></i>
+            <i class="icon icon-cd"></i>
+        </a>
+    </header>
+    <section class="aui-scrollView">
+        <div class="aui-packet-list">
+            <div class="aui-tab" data-ydui-tab="">
+                <ul class="tab-nav">
+                    <li class="tab-nav-item tab-active">
+                        <a href="javascript:;">全部</a>
+                    </li>
+                    <li class="tab-nav-item">
+                        <a href="javascript:;">待审批</a>
+                    </li>
+                    <li class="tab-nav-item">
+                        <a href="javascript:;">通过</a>
+                    </li>
+                    <li class="tab-nav-item">
+                        <a href="javascript:;">不通过</a>
+                    </li>
+                    <li class="tab-nav-item">
+                        <a href="javascript:;">已取消</a>
+                    </li>
+                </ul>
+                <div class="tab-panel">
+                    <!--全部-->
+                    <div class="tab-panel-item tab-active">
+                        <div class="aui-order-title" id="all">
+                            <div class="aui-order-box"><a
+                                    href="process.html"
+                                    class="aui-well-item">
+                                <div class="aui-well-item-bd"><h3>申请人：刘仁华</h3></div>
+                                <span class="aui-well-item-fr" style="color:#67C23A">审批通过</span> </a>
+                                <p class="aui-order-fl aui-order-time">通行时间：2022-04-08 11:35:59--2022-04-08 23:35:59</p>
+                                <p class="aui-order-fl aui-order-address">外出原因：外出面试</p>
+                                <p class="aui-order-fl aui-order-door">目的地：武汉金融港</p></div>
+                        </div>
+
+                    </div>
+
+                    <!--待审核-->
+                    <div class="tab-panel-item">
+
+                        <div class="aui-order-title" id="s1">
+
+                            <!--div class="aui-order-box">
+                                <a href="../liucheng/index.html" class="aui-well-item">
+                                    <div class="aui-well-item-bd">
+                                        <h3>申请人：李伟</h3>
+                                    </div>
+                                    <span class="aui-well-item-fr" style="color:#E6A23C">待审批</span>
+                                </a>
+                                <p class="aui-order-fl aui-order-time">通行时间：2022年3月12日19:00--2022年3月13日19:00</p>
+                                <p class="aui-order-fl aui-order-address">外出原因：医院看病</p>
+                                <p class="aui-order-fl aui-order-door">目的地：光谷同济医院</p>
+                            </div-->
+
+
+                        </div>
+
+                    </div>
+
+                    <!--通过-->
+                    <div class="tab-panel-item">
+
+                        <div class="aui-order-title" id="s2">
+
+                            <!--div class="aui-order-box">
+                                <a href="../liucheng/index.html" class="aui-well-item">
+                                    <div class="aui-well-item-bd">
+                                        <h3>申请人：李伟</h3>
+                                    </div>
+                                    <span class="aui-well-item-fr" style="color:#67C23A">审批通过</span>
+                                </a>
+                                <p class="aui-order-fl aui-order-time">通行时间：2022年3月12日19:00--2022年3月13日19:00</p>
+                                <p class="aui-order-fl aui-order-address">外出原因：医院看病</p>
+                                <p class="aui-order-fl aui-order-door">目的地：光谷同济医院</p>
+                            </div-->
+
+
+                        </div>
+
+                    </div>
+
+                    <!--不通过-->
+                    <div class="tab-panel-item">
+
+                        <div class="aui-order-title" id="s3">
+
+                            <!--div class="aui-order-box">
+                                <a href="../liucheng/index.html" class="aui-well-item">
+                                    <div class="aui-well-item-bd">
+                                        <h3>申请人：李伟</h3>
+                                    </div>
+                                    <span class="aui-well-item-fr" style="color:#F56C6C">不通过</span>
+                                </a>
+                                <p class="aui-order-fl aui-order-time">通行时间：2022年3月12日19:00--2022年3月13日19:00</p>
+                                <p class="aui-order-fl aui-order-address">外出原因：医院看病</p>
+                                <p class="aui-order-fl aui-order-door">目的地：光谷同济医院</p>
+                            </div-->
+
+
+                        </div>
+
+                    </div>
+
+                    <!--已取消-->
+                    <div class="tab-panel-item">
+
+                        <div class="aui-order-title" id="s4">
+
+                            <!--div class="aui-order-box">
+                                <a href="../liucheng/index.html" class="aui-well-item">
+                                    <div class="aui-well-item-bd">
+                                        <h3>申请人：李伟</h3>
+                                    </div>
+                                    <span class="aui-well-item-fr">已取消</span>
+                                </a>
+                                <p class="aui-order-fl aui-order-time">通行时间：2022年3月12日19:00--2022年3月13日19:00</p>
+                                <p class="aui-order-fl aui-order-address">外出原因：医院看病</p>
+                                <p class="aui-order-fl aui-order-door">目的地：光谷同济医院</p>
+                            </div-->
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--footer class="aui-footer aui-footer-fixed">
+        <a href="javascript:;" class="aui-tabBar-item aui-tabBar-item-active">
+            <span class="aui-tabBar-item-text">预约申请</span>
+        </a>
+        <a href="javascript:;" class="aui-tabBar-item">
+            <span class="aui-tabBar-item-text">预约须知</span>
+        </a>
+    </footer-->
+</section>
+
+
+<script>
+    init();
+
+    function init() {
+        $.ajax({
+            type: "GET",
+            url: "statics/data.json",
+            contentType: "application/json; charset=utf-8",
+
+            success: function (data) {
+                console.log(data.rows);
+                var hhh = "";
+                let json = localStorage.getItem('data')
+
+                if (json) {
+                    data.rows.unshift(JSON.parse(json))
+                }
+                if (data == null || data.rows == null || data.rows.length == 0) {
+                    hhh = "<div style='width:100vw;margin-top:20vh;'>暂无申请</div>";
+                } else {
+                    for (var i = 0; i < data.rows.length; i++) {
+
+                        hhh = hhh + '<div class="aui-order-box">' +
+                            '<a href="process.html?zhaji=' + data.rows[i].XTBHtext + '" class="aui-well-item">' +
+                            '<div class="aui-well-item-bd">' +
+                            ' <h3>申请人：' + data.rows[i].nametext + '</h3>' +
+                            '  </div>';
+                        if (data.rows[i].verifier1text == "待审批") {
+                            hhh = hhh + ' <span class="aui-well-item-fr" style="color:#E6A23C">待审批</span>';
+                        }
+                        if (data.rows[i].verifier1text == "审批通过") {
+                            hhh = hhh + '<span class="aui-well-item-fr" style="color:#67C23A">审批通过</span>';
+                        }
+                        if (data.rows[i].verifier1text == "不通过") {
+                            hhh = hhh + ' <span class="aui-well-item-fr" style="color:#F56C6C">不通过</span>';
+                        }
+                        if (data.rows[i].verifier1text == "已取消") {
+                            hhh = hhh + ' <span class="aui-well-item-fr">已取消</span>';
+                        }
+
+
+                        hhh = hhh + '   </a>' +
+                            ' <p class="aui-order-fl aui-order-time">通行时间：' + data.rows[i].outtimetext + '--' + data.rows[i].backtimetext + '</p>' +
+                            '  <p class="aui-order-fl aui-order-address">外出原因：' + data.rows[i].reasontext + '</p>' +
+                            '   <p class="aui-order-fl aui-order-door">目的地：' + data.rows[i].destinationtext + '</p>' +
+                            '  </div>';
+                    }
+                }
+
+                var all = document.getElementById("all");
+                all.innerHTML = hhh;
+
+
+            },
+            error: function (message) {
+                alert("失败：" + message.msg);
+            }
+        });
+    }
+
+
+    function changetab(index) {
+
+        console.log("修改tab的值" + index)
+        if (index == 0) {
+
+            $.ajax({
+                type: "GET",
+                url: "statics/data.json",
+                contentType: "application/json; charset=utf-8",
+
+                success: function (data) {
+                    let json = localStorage.getItem('data')
+
+                    if (json) {
+                        data.rows.unshift(JSON.parse(json))
+                    }
+
+                    var hhh = "";
+                    if (data == null || data.rows == null || data.rows.length == 0) {
+                        hhh = "<div style='width:100vw;margin-top:20vh;text-align:center;'>暂无申请</div>";
+                    } else {
+                        for (var i = 0; i < data.rows.length; i++) {
+
+                            hhh = hhh + '<div class="aui-order-box">' +
+                                '<a href="process.html?zhaji=' + data.rows[i].XTBHtext + '" class="aui-well-item">' +
+                                '<div class="aui-well-item-bd">' +
+                                ' <h3>申请人：' + data.rows[i].nametext + '</h3>' +
+                                '  </div>';
+                            if (data.rows[i].verifier1text == "待审批") {
+                                hhh = hhh + ' <span class="aui-well-item-fr" style="color:#E6A23C">待审批</span>';
+                            }
+                            if (data.rows[i].verifier1text == "审批通过") {
+                                hhh = hhh + '<span class="aui-well-item-fr" style="color:#67C23A">审批通过</span>';
+                            }
+                            if (data.rows[i].verifier1text == "不通过") {
+                                hhh = hhh + ' <span class="aui-well-item-fr" style="color:#F56C6C">不通过</span>';
+                            }
+                            if (data.rows[i].verifier1text == "已取消") {
+                                hhh = hhh + ' <span class="aui-well-item-fr">已取消</span>';
+                            }
+
+
+                            hhh = hhh + '   </a>' +
+                                ' <p class="aui-order-fl aui-order-time">通行时间：' + data.rows[i].outtimetext + '--' + data.rows[i].backtimetext + '</p>' +
+                                '  <p class="aui-order-fl aui-order-address">外出原因：' + data.rows[i].reasontext + '</p>' +
+                                '   <p class="aui-order-fl aui-order-door">目的地：' + data.rows[i].destinationtext + '</p>' +
+                                '  </div>';
+                        }
+                    }
+
+                    var all = document.getElementById("all");
+                    all.innerHTML = hhh;
+                },
+                error: function (message) {
+                    alert("失败：" + message.msg);
+                }
+            });
+
+        } else if (index == 1) {
+
+            $.ajax({
+                type: "GET",
+                url: "statics/empty.json",
+                contentType: "application/json; charset=utf-8",
+
+                success: function (data) {
+                    console.log(data.rows);
+                    var hhh = "";
+                    if (data == null || data.rows == null || data.rows.length == 0) {
+
+                        hhh = "<div style='width:100vw;margin-top:20vh;text-align:center;'>暂无申请</div>";
+                    } else {
+                        for (var i = 0; i < data.rows.length; i++) {
+
+                            hhh = hhh + '<div class="aui-order-box">' +
+                                '<a href="process.html' + data.rows[i].XTBHtext + '" class="aui-well-item">' +
+                                '<div class="aui-well-item-bd">' +
+                                ' <h3>申请人：' + data.rows[i].nametext + '</h3>' +
+                                '  </div>';
+                            if (data.rows[i].verifier1text == "待审批") {
+                                hhh = hhh + ' <span class="aui-well-item-fr" style="color:#E6A23C">待审批</span>';
+                            }
+                            if (data.rows[i].verifier1text == "审批通过") {
+                                hhh = hhh + '<span class="aui-well-item-fr" style="color:#67C23A">审批通过</span>';
+                            }
+                            if (data.rows[i].verifier1text == "不通过") {
+                                hhh = hhh + ' <span class="aui-well-item-fr" style="color:#F56C6C">不通过</span>';
+                            }
+                            if (data.rows[i].verifier1text == "已取消") {
+                                hhh = hhh + ' <span class="aui-well-item-fr">已取消</span>';
+                            }
+
+
+                            hhh = hhh + '   </a>' +
+                                ' <p class="aui-order-fl aui-order-time">通行时间：' + data.rows[i].outtimetext + '--' + data.rows[i].backtimetext + '</p>' +
+                                '  <p class="aui-order-fl aui-order-address">外出原因：' + data.rows[i].reasontext + '</p>' +
+                                '   <p class="aui-order-fl aui-order-door">目的地：' + data.rows[i].destinationtext + '</p>' +
+                                '  </div>';
+                        }
+                    }
+                    var s1 = document.getElementById("s1");
+                    s1.innerHTML = hhh;
+                },
+                error: function (message) {
+                    alert("失败：" + message.msg);
+                }
+            });
+
+
+        } else if (index == 2) {
+
+            $.ajax({
+                type: "GET",
+                url: "statics/data.json",
+                contentType: "application/json; charset=utf-8",
+
+                success: function (data) {
+                    console.log(data.rows);
+                    let json = localStorage.getItem('data')
+
+                    if (json) {
+                        data.rows.unshift(JSON.parse(json))
+                    }
+                    var hhh = "";
+                    if (data == null || data.rows == null || data.rows.length == 0) {
+                        hhh = "<div style='width:100vw;margin-top:20vh;text-align:center;'>暂无申请</div>";
+                    }else{
+                        for (var i = 0; i < data.rows.length; i++) {
+
+                        hhh = hhh + '<div class="aui-order-box">' +
+                            '<a href="process.html?zhaji=' + data.rows[i].XTBHtext + '" class="aui-well-item">' +
+                            '<div class="aui-well-item-bd">' +
+                            ' <h3>申请人：' + data.rows[i].nametext + '</h3>' +
+                            '  </div>';
+                        if (data.rows[i].verifier1text == "待审批") {
+                            hhh = hhh + ' <span class="aui-well-item-fr" style="color:#E6A23C">待审批</span>';
+                        }
+                        if (data.rows[i].verifier1text == "审批通过") {
+                            hhh = hhh + '<span class="aui-well-item-fr" style="color:#67C23A">审批通过</span>';
+                        }
+                        if (data.rows[i].verifier1text == "不通过") {
+                            hhh = hhh + ' <span class="aui-well-item-fr" style="color:#F56C6C">不通过</span>';
+                        }
+                        if (data.rows[i].verifier1text == "已取消") {
+                            hhh = hhh + ' <span class="aui-well-item-fr">已取消</span>';
+                        }
+
+
+                        hhh = hhh + '   </a>' +
+                            ' <p class="aui-order-fl aui-order-time">通行时间：' + data.rows[i].outtimetext + '--' + data.rows[i].backtimetext + '</p>' +
+                            '  <p class="aui-order-fl aui-order-address">外出原因：' + data.rows[i].reasontext + '</p>' +
+                            '   <p class="aui-order-fl aui-order-door">目的地：' + data.rows[i].destinationtext + '</p>' +
+                            '  </div>';
+                    }
+                    }
+                    var s2 = document.getElementById("s2");
+                    s2.innerHTML = hhh;
+                },
+                error: function (message) {
+                    alert("失败：" + message.msg);
+                }
+            });
+
+        } else if (index == 3) {
+
+            $.ajax({
+                type: "GET",
+                url: "statics/empty.json",
+                contentType: "application/json; charset=utf-8",
+
+                success: function (data) {
+                    console.log(data.rows);
+                    var hhh = "";
+                    if (data == null || data.rows == null || data.rows.length == 0) {
+                        hhh = "<div style='width:100vw;margin-top:20vh;text-align:center;'>暂无申请</div>";
+                    }else{
+                        for (var i = 0; i < data.rows.length; i++) {
+
+                        hhh = hhh + '<div class="aui-order-box">' +
+                            '<a href="process.html?zhaji=' + data.rows[i].XTBHtext + '" class="aui-well-item">' +
+                            '<div class="aui-well-item-bd">' +
+                            ' <h3>申请人：' + data.rows[i].nametext + '</h3>' +
+                            '  </div>';
+                        if (data.rows[i].verifier1text == "待审批") {
+                            hhh = hhh + ' <span class="aui-well-item-fr" style="color:#E6A23C">待审批</span>';
+                        }
+                        if (data.rows[i].verifier1text == "审批通过") {
+                            hhh = hhh + '<span class="aui-well-item-fr" style="color:#67C23A">审批通过</span>';
+                        }
+                        if (data.rows[i].verifier1text == "不通过") {
+                            hhh = hhh + ' <span class="aui-well-item-fr" style="color:#F56C6C">不通过</span>';
+                        }
+                        if (data.rows[i].verifier1text == "已取消") {
+                            hhh = hhh + ' <span class="aui-well-item-fr">已取消</span>';
+                        }
+
+
+                        hhh = hhh + '   </a>' +
+                            ' <p class="aui-order-fl aui-order-time">通行时间：' + data.rows[i].outtimetext + '--' + data.rows[i].backtimetext + '</p>' +
+                            '  <p class="aui-order-fl aui-order-address">外出原因：' + data.rows[i].reasontext + '</p>' +
+                            '   <p class="aui-order-fl aui-order-door">目的地：' + data.rows[i].destinationtext + '</p>' +
+                            '  </div>';
+                    }
+                    }
+                    var s3 = document.getElementById("s3");
+                    s3.innerHTML = hhh;
+                },
+                error: function (message) {
+                    alert("失败：" + message.msg);
+                }
+            });
+
+        } else if (index == 4) {
+
+            $.ajax({
+                type: "GET",
+                url: "statics/empty.json",
+                contentType: "application/json; charset=utf-8",
+
+                success: function (data) {
+                    console.log(data.rows);
+                    var hhh = "";
+                    if (data == null || data.rows == null || data.rows.length == 0) {
+                        hhh = "<div style='width:100vw;margin-top:20vh;text-align:center;'>暂无申请</div>";
+                    }else {
+                        for (var i = 0; i < data.rows.length; i++) {
+
+                        hhh = hhh + '<div class="aui-order-box">' +
+                            '<a href="process.html?zhaji=' + data.rows[i].XTBHtext + '" class="aui-well-item">' +
+                            '<div class="aui-well-item-bd">' +
+                            ' <h3>申请人：' + data.rows[i].nametext + '</h3>' +
+                            '  </div>';
+                        if (data.rows[i].verifier1text == "待审批") {
+                            hhh = hhh + ' <span class="aui-well-item-fr" style="color:#E6A23C">待审批</span>';
+                        }
+                        if (data.rows[i].verifier1text == "审批通过") {
+                            hhh = hhh + '<span class="aui-well-item-fr" style="color:#67C23A">审批通过</span>';
+                        }
+                        if (data.rows[i].verifier1text == "不通过") {
+                            hhh = hhh + ' <span class="aui-well-item-fr" style="color:#F56C6C">不通过</span>';
+                        }
+                        if (data.rows[i].verifier1text == "已取消") {
+                            hhh = hhh + ' <span class="aui-well-item-fr">已取消</span>';
+                        }
+
+
+                        hhh = hhh + '   </a>' +
+                            ' <p class="aui-order-fl aui-order-time">通行时间：' + data.rows[i].outtimetext + '--' + data.rows[i].backtimetext + '</p>' +
+                            '  <p class="aui-order-fl aui-order-address">外出原因：' + data.rows[i].reasontext + '</p>' +
+                            '   <p class="aui-order-fl aui-order-door">目的地：' + data.rows[i].destinationtext + '</p>' +
+                            '  </div>';
+                    }
+                    }
+
+                    var s4 = document.getElementById("s4");
+                    s4.innerHTML = hhh;
+                },
+                error: function (message) {
+                    alert("失败：" + message.msg);
+                }
+            });
+
+        } else {
+
+        }
+
+
+    }
+</script>
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+    <div class="xl-chrome-ext-bar__logo"></div>
+
+    <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+    <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+</div>
+</body>
+</html>

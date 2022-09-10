@@ -1,0 +1,110 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>查看审批进展</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link href="process/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<section class="aui-flexView">
+    <header class="aui-navBar aui-navBar-fixed b-line">
+        <a href="javascript:window.history.back();;" class="aui-navBar-item">
+            <i class="icon icon-return"></i>
+        </a>
+        <div class="aui-center">
+            <span class="aui-center-title">查看审批进展</span>
+        </div>
+        <a href="javascript:;" class="aui-navBar-item">
+
+        </a>
+    </header>
+    <section class="aui-scrollView">
+        <div class="aui-flex aui-flex-lag">
+            <div class="aui-aircraft-img">
+                <img style="border-radius:50%;" src="img/1.png" alt="">
+            </div>
+            <div class="aui-flex-box">
+                <h2>
+                    姓名：<em id="uname">XXX</em>
+                </h2>
+                <h2>
+                    学号：<em id="uid">XXXXX</em>
+                </h2>
+            </div>
+
+        </div>
+
+        <div class="divHeight"></div>
+        <div class="aui-flex aui-flex-lag">
+            <div class="aui-flex-box">
+                <h2 style="color:#333">审批进展</h2>
+            </div>
+        </div>
+        <div class="aui-timeLine b-line">
+            <ul class="aui-timeLine-content">
+
+                <li class="aui-timeLine-content-item" id="s5" style="display: none;">
+                    <em class="aui-timeLine-content-icon"></em>
+                    <p>请放心通行,注意按时返校</p>
+                    <p style="margin-top: 10px;" id="ss5"></p>
+                </li>
+                <li class="aui-timeLine-content-item" id="s4" style="display: none;">
+                    <em class="aui-timeLine-content-icon"></em>
+                    <p>等待校门闸机获取通行数据..</p>
+                    <p style="margin-top: 10px;" id="ss4"></p>
+                </li>
+                <li class="aui-timeLine-content-item" id="s3" style="display: none;">
+                    <em class="aui-timeLine-content-icon"></em>
+                    <p>学院审核未通过</p>
+                    <p style="margin-top: 10px;" id="ss3"></p>
+                </li>
+                <li class="aui-timeLine-content-item" id="s2" style="display: none;">
+                    <em class="aui-timeLine-content-icon"></em>
+                    <p>辅导员老师审核通过</p>
+                    <p style="margin-top: 10px;" id="ss2"></p>
+                </li>
+                <li class="aui-timeLine-content-item" id="s1" style="display: none;">
+                    <em class="aui-timeLine-content-icon"></em>
+                    <p>等待学院辅导员审核..</p>
+                    <p style="margin-top: 10px;" id="ss1"></p>
+                </li>
+
+                <li class="aui-timeLine-content-item">
+                    <em class="aui-timeLine-content-icon"></em>
+                    <p>已经成功提交了申请，请等待老师审核</p>
+                    <p style="margin-top: 10px;" id="ss0">2022-04-07 11:37:15</p>
+                </li>
+            </ul>
+        </div>
+        <div class="b-line divHeight"></div>
+
+    </section>
+
+
+    <script>
+        init();
+
+        function init() {
+            let data = localStorage.getItem('data')
+            data = JSON.parse(data)
+            document.getElementById('uname').innerText = data.nametext
+            document.getElementById('uid').innerText = data.studentnotext
+            document.getElementById('ss0').innerText = data.outtimetext
+        }
+
+    </script>
+
+
+</section>
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+    <div class="xl-chrome-ext-bar__logo"></div>
+
+    <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+    <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+</div>
+</body>
+</html>
